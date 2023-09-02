@@ -61,23 +61,21 @@ function Lottery() {
       setInitialPopup(true)
       setRandomNumbers([...newRandomNumbers]);
 
-      await axios.post("https://omidemami.ir/api/registerwinner",
-      {
-        Code: newRandomNumbers
-      })
+      
       await new Promise((resolve) => setTimeout(resolve, 5000));
     }else{
       const randomNumber = Math.floor(Math.random() * (parseInt(secondNumber) - parseInt(firstNumber) + 1)) + parseInt(firstNumber);
       newRandomNumbers.push(randomNumber);
       setRandomNumbers([...newRandomNumbers]);
       setIsCele(true)
-      await axios.post("https://omidemami.ir/api/registerwinner",
-      {
-        Code: newRandomNumbers
-      })
+      
       await new Promise((resolve) => setTimeout(resolve, 400));
     }
     }
+    await axios.post("https://omidemami.ir/api/registerwinner",
+      {
+        Code: newRandomNumbers
+      })
     await new Promise((resolve) => setTimeout(resolve, 10000));
     setIsCele(false)
     setInitialPopup(false)
