@@ -61,7 +61,7 @@ function Lottery() {
       setInitialPopup(true)
       setRandomNumbers([...newRandomNumbers]);
 
-      await axios.post("http://localhost:3001/api/registerwinner",
+      await axios.post("https://omidemami.ir/api/registerwinner",
       {
         Code: newRandomNumbers
       })
@@ -71,7 +71,7 @@ function Lottery() {
       newRandomNumbers.push(randomNumber);
       setRandomNumbers([...newRandomNumbers]);
       setIsCele(true)
-      await axios.post("http://localhost:3001/api/registerwinner",
+      await axios.post("https://omidemami.ir/api/registerwinner",
       {
         Code: newRandomNumbers
       })

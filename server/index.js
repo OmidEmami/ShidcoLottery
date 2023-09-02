@@ -17,14 +17,14 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 const server = http.createServer(app);
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 app.use(cookieParser());
 app.use(express.json());
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-server.listen(PORT, ()=> console.log('Server running at port 3001'));
+server.listen(PORT,'0.0.0.0', ()=> console.log('Server running at port 3002'));
 
   app.post('/api/registerwinner', async (req, res) => {
     
@@ -37,7 +37,7 @@ server.listen(PORT, ()=> console.log('Server running at port 3001'));
     }
       res.json("ok")
     } catch (error) {
-
+console.log(error)
       
       res.status(500).json({ error: 'An error occurred while making the request.' });
     }
