@@ -92,7 +92,7 @@ function Lottery() {
     <div className={styles.mainDivContainer}>
     <div>
       <h2>برندگان</h2>
-        <ul>
+        <ul className={styles.winnerList}>
         {randomNumbers.length > 0 ? randomNumbers.map((number, index) => (
           <li style={{color:"blue"}} key={index}>{number}</li>
         )):<p>منتظر بمانید...</p>}

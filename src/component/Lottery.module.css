@@ -22,10 +22,13 @@
     flex-direction: column;
     row-gap: 10px;
     width: 100%;
-    background-color: #ff6600;
+    background-color: #084C7C;
     padding: 2vw;
     border-radius: 10px;
     
+  }
+  .lotteryFrom label{
+    color: white;
   }
   .lotteryFrom input{
     border-radius: 5px;
@@ -40,7 +43,7 @@
     transition: 0.3s;
   }
   .lotteryFrom button:hover{
-    background-color: #084C7C;
+    background-color: #FF6600;
     color: white;
   }
   .overlay {
@@ -70,7 +73,7 @@
   .header{
     background-color: #F0F0F0;
     height: 3%;
-    
+    z-index: 5;
     padding: 2rem;
     direction: rtl;
     display: flex;
@@ -86,11 +89,33 @@
   }
   .header h3{
     font-size: 1.2rem;
-    color: #ff6600;
+    color: #084C7C;
   }
   .formContainer{
     padding-right:10vw;
     padding-left:10vw;
     padding-top:5vw;
   }
+  .winnerList {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into multiple lines */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    gap: 10px; /* Adjust the gap between items */
+  }
+  
+  .winnerList li {
+    /* Style individual list items as needed */
+    background-color: #b9b9b9;
+    padding: 5px;
+    border-radius: 5px;
+    /* Add other styles as needed */
+  }
+
+  
+  
+  
+  
+  
   
