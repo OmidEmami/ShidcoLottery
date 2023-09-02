@@ -3,16 +3,19 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import bodyParser from "body-parser";
 import http from "http";
-
-import path from "path";
-import fs from 'fs';
-import axios from "axios";
 import Lotterywinners from "./models/lotterywinners.js";
 
 
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000'
+  , // Replace with your frontend domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // If you're using cookies or sessions
+};
+
+app.use(cors(corsOptions));
 const server = http.createServer(app);
 const PORT = process.env.PORT || 3001;
 app.use(cookieParser());
