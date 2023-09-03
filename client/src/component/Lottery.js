@@ -62,7 +62,7 @@ function Lottery() {
       setRandomNumbers([...newRandomNumbers]);
 
       
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      await new Promise((resolve) => setTimeout(resolve, 30000));
     }else{
       const randomNumber = Math.floor(Math.random() * (parseInt(secondNumber) - parseInt(firstNumber) + 1)) + parseInt(firstNumber);
       newRandomNumbers.push(randomNumber);
