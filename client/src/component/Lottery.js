@@ -49,7 +49,7 @@ function Lottery() {
         setIsCele(false)
         setInitialPopup(false)
        
-        await new Promise((resolve) => setTimeout(resolve,  timeWinner*1000));
+        await new Promise((resolve) => setTimeout(resolve,  1000));
         const randomNumber = Math.floor(Math.random() * (parseInt(secondNumber) - parseInt(firstNumber) + 1)) + parseInt(firstNumber);
       newRandomNumbers.push(randomNumber);
       
@@ -62,7 +62,7 @@ function Lottery() {
       setRandomNumbers([...newRandomNumbers]);
 
       
-      await new Promise((resolve) => setTimeout(resolve, 30000));
+      await new Promise((resolve) => setTimeout(resolve, timeWinner * 1000));
     }else{
       const randomNumber = Math.floor(Math.random() * (parseInt(secondNumber) - parseInt(firstNumber) + 1)) + parseInt(firstNumber);
       newRandomNumbers.push(randomNumber);
